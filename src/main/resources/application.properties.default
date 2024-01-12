@@ -1,0 +1,3 @@
+spring.datasource.url=jdbc:mysql://URL:3306/DB_NAME?useSSL=false&serverTimezone=UTC
+spring.datasource.username=
+spring.datasource.password=
