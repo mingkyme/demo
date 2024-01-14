@@ -1,10 +1,10 @@
-package com.example.demo.device.service;
+package com.example.demo.device.application.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.device.domain.dto.DeviceDto;
-import com.example.demo.device.domain.dto.DeviceMaker;
-import com.example.demo.device.domain.entity.Device;
+import com.example.demo.device.domain.device.Device;
+import com.example.demo.device.domain.entity.DeviceEntity;
+import com.example.demo.device.domain.factory.DeviceFactory;
 import com.example.demo.device.repositiory.DeviceRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -16,8 +16,8 @@ public class DeviceServiceImpl implements DeviceService {
 
   @Override
   public String run(Long userId, Long deviceId) {
-    Device device = deviceRepository.findById(deviceId).get();
-    DeviceDto deviceDto = DeviceMaker.make(device);
+    DeviceEntity device = deviceRepository.findById(deviceId).get();
+    Device deviceDto = DeviceFactory.make(device);
 
     String result = deviceDto.run();
     deviceRepository.save(device);

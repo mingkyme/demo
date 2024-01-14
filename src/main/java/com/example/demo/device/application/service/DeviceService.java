@@ -1,4 +1,4 @@
-package com.example.demo.device.service;
+package com.example.demo.device.application.service;
 
 
 public interface DeviceService {

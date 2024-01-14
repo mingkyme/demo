@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.device.service.DeviceService;
+import com.example.demo.device.application.service.DeviceService;
 
 import lombok.RequiredArgsConstructor;
 
