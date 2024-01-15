@@ -17,6 +17,8 @@ public class DeviceServiceImpl implements DeviceService {
   @Override
   public String run(Long userId, Long deviceId) {
     DeviceEntity device = deviceRepository.findById(deviceId).get();
+    // Fatory를 위한 DTO 생성
+    
     Device deviceDto = DeviceFactory.make(device);
 
     String result = deviceDto.run();

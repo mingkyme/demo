@@ -8,9 +8,9 @@ import com.example.demo.device.domain.entity.DeviceEntity;
 public class DeviceFactory {
   public static Device make(DeviceEntity device) {
     if(device.getDeviceType().equals("android")){
-      return new AndroidDevice(device);
+      return new AndroidDevice(device.getId(),device.getDeviceName());
     } else if(device.getDeviceType().equals("ios")){
-      return new IosDevice(device);
+      return new IosDevice(device.getId(),device.getDeviceName());
     } else {
       throw new RuntimeException("지원하지 않는 디바이스입니다.");
     }

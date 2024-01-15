@@ -1,6 +1,6 @@
 package com.example.demo.device.domain.entity;
 
-import java.sql.Time;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
@@ -15,6 +15,8 @@ public class DeviceEntity {
     private Long id;
     private String deviceName;
     private String deviceType;
-    private Time createdAt;
-    private Time updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+    
+
 }

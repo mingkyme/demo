@@ -10,5 +10,5 @@ import com.example.demo.device.domain.entity.UserEntity;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long>{
-    List<DeviceEntity> findAllByUserName(String userName);  
+    List<DeviceEntity> findAllByUserName(String userName);
 }

@@ -1,10 +1,9 @@
 package com.example.demo.device.domain.device;
 
-import com.example.demo.device.domain.entity.DeviceEntity;
-
 public class IosDevice extends Device {
-  public IosDevice(DeviceEntity device) {
-    this.deviceName = device.getDeviceName();
+  public IosDevice(long deviceId, String deviceName) {
+    this.deviceId = deviceId;
+    this.deviceName = deviceName;
   }
 
   @Override

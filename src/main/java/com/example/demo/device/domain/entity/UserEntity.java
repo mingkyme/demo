@@ -1,6 +1,6 @@
 package com.example.demo.device.domain.entity;
 
-import java.sql.Time;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
@@ -14,6 +14,6 @@ public class UserEntity {
   @Id
   private Long id;
   private String userName;
-  private Time createdAt;
-  private Time updatedAt;
+  private LocalDateTime createdAt;
+  private LocalDateTime updatedAt;
 }
